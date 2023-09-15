@@ -5,6 +5,9 @@ import { type AppType } from "next/dist/shared/lib/utils";
 
 import { BridgeProvider, tokens, networks } from "@pgn/react";
 
+import Head from 'next/head';
+
+
 const l1 = networks.supportedChains[process.env.NEXT_PUBLIC_L1 || "sepolia"];
 const l2 = networks.supportedChains[process.env.NEXT_PUBLIC_L2 || "pgnTestnet"];
 
@@ -22,9 +25,15 @@ const config = {
 
 const MyApp: AppType = ({ Component, pageProps }) => {
   return (
+    <>
+        <Head>
+          <link rel="icon" href="/logo-circle-black.png" type="image/png" />
+          <link rel="icon" href="/logo-circle-black.svg" type="image/svg+xml" />
+        </Head>
     <BridgeProvider config={config}>
       <Component {...pageProps} />
     </BridgeProvider>
+    </>
   );
 };
 
