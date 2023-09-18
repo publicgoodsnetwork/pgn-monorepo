@@ -74,6 +74,7 @@ export const DAI = {
 export const USDT = {
   name: "USDT",
   symbol: "USDT",
+  decimals: 6,
   tokens: {
     mainnet: {
       address: "0xdac17f958d2ee523a2206206994597c13d831ec7",
