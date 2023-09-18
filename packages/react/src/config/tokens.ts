@@ -51,3 +51,22 @@ export const GTC = {
     },
   },
 };
+
+export const DAI = {
+  name: "DAI",
+  symbol: "DAI",
+  tokens: {
+    mainnet: {
+      address: "0x6b175474e89094c44da98b954eedeac495271d0f",
+    },
+    homestead: {
+      address: "0x6b175474e89094c44da98b954eedeac495271d0f",
+    },
+    pgnTestnet: {
+      address: "",
+    },
+    pgn: {
+      address: "0x997cf63ab30BA8e591203228d5c5468Fc3834166",
+    },
+  },
+};
