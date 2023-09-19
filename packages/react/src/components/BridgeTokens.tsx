@@ -14,6 +14,7 @@ import { useSelectedToken } from "../hooks/useSelectedToken";
 import { Card } from "./ui/Card";
 import { memo, useMemo } from "react";
 import { ethers } from "ethers";
+import { parseUnits } from "ethers/lib/utils.js";
 
 const parseEther = ethers.utils.parseEther;
 export const Actions = {
@@ -71,8 +72,12 @@ export const BridgeTokens = memo(() => {
     <Form
       schema={BridgeSchema}
       onSubmit={(values, form) => {
-        const amount = parseEther(String(values.amount)).toString();
         const token = getToken(values.token);
+        const amount = parseUnits(
+          String(values.amount),
+          token?.decimals ?? 18
+        ).toString();
+
         return mutate(
           { amount, token },
           { onSuccess: () => form.resetField("amount") }
