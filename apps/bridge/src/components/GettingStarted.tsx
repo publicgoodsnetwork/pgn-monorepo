@@ -6,7 +6,7 @@ export const GettingStarted = () => {
       className="underline"
       target="_blank"
       href="https://docs.publicgoods.network/using-pgn/bridging"
-      >More info on bridging and withdrawing from PGN
+      >More details on bridging to and withdrawing from PGN. 
       </a>
     </div>
     </>

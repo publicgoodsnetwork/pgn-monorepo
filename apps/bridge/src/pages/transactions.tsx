@@ -9,6 +9,7 @@ export default function TransactionsPage() {
         <h1 className="mb-4 text-3xl font-bold">Withdrawals</h1>
         <Transactions />
       </div>
+      <GettingStarted />
     </Layout>
   );
 }
