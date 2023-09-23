@@ -42,7 +42,6 @@ export function useDeposit() {
       });
 
       if (allowance.lt(amount)) {
-        pushLog("Approving ERC20...");
         const approve = await crossChainMessenger.approveERC20(
           l1Address,
           l2Address,
