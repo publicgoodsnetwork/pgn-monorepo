@@ -17,7 +17,7 @@ if (!(l1 && l2)) {
 }
 const config = {
   // Tokens to be shown in the UI
-  tokens: [tokens.ETH, tokens.TestToken, tokens.GTC, tokens.DAI],
+  tokens: [tokens.ETH, tokens.TestToken, tokens.GTC, tokens.DAI, tokens.USDT],
   // Configs with RPC url and chain IDs
   networks: { l1, l2 },
 };

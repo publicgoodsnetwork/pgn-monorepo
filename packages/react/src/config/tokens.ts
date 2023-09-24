@@ -70,3 +70,23 @@ export const DAI = {
     },
   },
 };
+
+export const USDT = {
+  name: "USDT",
+  symbol: "USDT",
+  decimals: 6,
+  tokens: {
+    mainnet: {
+      address: "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    },
+    homestead: {
+      address: "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    },
+    pgnTestnet: {
+      address: "",
+    },
+    pgn: {
+      address: "0x6535b3db9B908a2bbA29F83c168a0e661C3fAbf7",
+    },
+  },
+};
