@@ -90,3 +90,23 @@ export const USDT = {
     },
   },
 };
+
+export const USDC = {
+  name: "USDC",
+  symbol: "USDC",
+  decimals: 6,
+  tokens: {
+    mainnet: {
+      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    },
+    homestead: {
+      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+    },
+    pgnTestnet: {
+      address: "",
+    },
+    pgn: {
+      address: "0xE00B396371Bc9f3e9081BD7F52D2Ec3E1Cb868f7",
+    },
+  },
+};
