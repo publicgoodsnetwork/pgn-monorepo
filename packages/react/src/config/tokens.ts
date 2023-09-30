@@ -1,5 +1,3 @@
-import { Token } from "../types";
-
 export const ETH = {
   name: "ETH",
   symbol: "ETH",
@@ -13,22 +11,6 @@ export const ETH = {
     sepolia: { address: "" },
     pgn: { address: "" },
     pgnTestnet: { address: "" },
-  },
-};
-
-export const DAI = {
-  name: "DAI",
-  symbol: "DAI",
-  tokens: {
-    mainnet: {
-      address: "0x6B175474E89094C44Da98b954EedeAC495271d0F",
-    },
-    pgnTestnet: {
-      address: "",
-    },
-    pgn: {
-      address: "",
-    },
   },
 };
 
@@ -51,18 +33,21 @@ export const GTC = {
   },
 };
 
-export const USDC = {
-  name: "USDC",
-  symbol: "USDC",
+export const DAI = {
+  name: "DAI",
+  symbol: "DAI",
   tokens: {
     mainnet: {
-      address: "0xa0b86991c6218b36c1d19d4a2e9eb0ce3606eb48",
+      address: "0x6b175474e89094c44da98b954eedeac495271d0f",
+    },
+    homestead: {
+      address: "0x6b175474e89094c44da98b954eedeac495271d0f",
     },
     pgnTestnet: {
       address: "",
     },
     pgn: {
-      address: "",
+      address: "0x997cf63ab30BA8e591203228d5c5468Fc3834166",
     },
   },
 };
@@ -70,15 +55,19 @@ export const USDC = {
 export const USDT = {
   name: "USDT",
   symbol: "USDT",
+  decimals: 6,
   tokens: {
     mainnet: {
+      address: "0xdac17f958d2ee523a2206206994597c13d831ec7",
+    },
+    homestead: {
       address: "0xdac17f958d2ee523a2206206994597c13d831ec7",
     },
     pgnTestnet: {
       address: "",
     },
     pgn: {
-      address: "",
+      address: "0x6535b3db9B908a2bbA29F83c168a0e661C3fAbf7",
     },
   },
 };
