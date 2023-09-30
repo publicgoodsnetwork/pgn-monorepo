@@ -216,14 +216,9 @@ function useDeployERC20() {
     abi: optimismMintableERC20FactoryData.abi,
     eventName: "OptimismMintableERC20Created",
     once: true,
-    listener: (events) => {
-      console.log("deploy events", events);
-      const event = (events as any)[0];
-      if (event) {
-        const { localToken } = (event as any).args || {};
-        pushLog(`Token deployed to L2: ${localToken}`);
-        setL2Address(localToken);
-      }
+    listener: (localToken) => {
+      pushLog(`Token deployed to L2: ${localToken}`);
+      setL2Address(localToken as string);
     },
   });
 
