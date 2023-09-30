@@ -5,7 +5,6 @@ import { TransferLog } from "./TransferLog";
 import { ErrorMessage } from "./ErrorMessage";
 import { Card } from "./ui/Card";
 import { ChangeEvent, memo, useEffect, useState } from "react";
-import { isAddress } from "viem";
 import { Label } from "./ui/Form";
 import { useFormContext } from "react-hook-form";
 import { usePGN } from "..";
@@ -196,6 +195,7 @@ const DeployButton = ({ isLoading = false }) => {
 
 import optimismMintableERC20FactoryData from "@eth-optimism/contracts-bedrock/artifacts/contracts/universal/OptimismMintableERC20Factory.sol/OptimismMintableERC20Factory.json";
 import { useTransactionLog } from "../hooks/bridge";
+import { isAddress } from "ethers/lib/utils.js";
 
 function useDeployERC20() {
   const [l2Address, setL2Address] = useState("");
