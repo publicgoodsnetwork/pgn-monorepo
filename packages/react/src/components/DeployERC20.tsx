@@ -205,21 +205,24 @@ function useDeployERC20() {
     abi: optimismMintableERC20FactoryData.abi,
     address: "0x4200000000000000000000000000000000000012",
     functionName: "createOptimismMintableERC20",
+    mode: "recklesslyUnprepared",
     onMutate: () => pushLog("Deploying ERC20 to L2..."),
     onSuccess: () => pushLog("Transaction sent..."),
     onError: () => resetLog(),
   });
 
-  const unwatch = useContractEvent({
+  useContractEvent({
     address: "0x4200000000000000000000000000000000000012",
     abi: optimismMintableERC20FactoryData.abi,
     eventName: "OptimismMintableERC20Created",
-    listener: ([event]) => {
+    once: true,
+    listener: (events) => {
+      console.log("deploy events", events);
+      const event = (events as any)[0];
       if (event) {
         const { localToken } = (event as any).args || {};
         pushLog(`Token deployed to L2: ${localToken}`);
         setL2Address(localToken);
-        unwatch?.();
       }
     },
   });
