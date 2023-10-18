@@ -66,7 +66,7 @@ export const DAI = {
       address: "",
     },
     pgn: {
-      address: "0x997cf63ab30BA8e591203228d5c5468Fc3834166",
+      address: "0x6C121674ba6736644A7e73A8741407fE8a5eE5BA",
     },
   },
 };
