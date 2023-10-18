@@ -106,7 +106,7 @@ export const USDC = {
       address: "",
     },
     pgn: {
-      address: "0xa6F54dBe9E9BB7797A33120d77396988033Bd063",
+      address: "0xcB2D7d6D249760b8567055617bD87a2Ab49ff54E",
     },
   },
 };
