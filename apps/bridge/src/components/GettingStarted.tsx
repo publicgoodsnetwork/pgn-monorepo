@@ -3,7 +3,7 @@ export const GettingStarted = () => {
     <>
       <style jsx>{`
         .paragraph-spacing {
-          margin-bottom: 10px;
+          margin-bottom: 20px;
         }
       `}</style>
       <div className="text-base">
