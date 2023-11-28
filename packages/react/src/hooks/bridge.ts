@@ -118,7 +118,7 @@ export function useWithdraw() {
     pushLog(`Transaction hash (on L2): ${res.hash}`);
     await res.wait();
 
-    pushLog("Withdraw successful! Transaction will be finalized in 7 days.");
+    pushLog("Withdraw initiated. Next up: (1.) Change network to Ethereum (2.) Navigate to the Withdrawals page (3.) Wait 30 minutes (4.) click Prove to kick off 7-day challenge period (5.) On Withdrawal page, click Finalize after 7 days challenge period ends.");
 
     return res;
   });
