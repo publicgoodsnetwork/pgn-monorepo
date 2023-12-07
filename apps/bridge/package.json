@@ -6,7 +6,7 @@
     "build": "next build",
     "dev": "next dev",
     "lint": "next lint",
-    "start": "react-scripts start",
+    "start": "react-scripts start"
   },
   "dependencies": {
     "@pgn/react": "workspace:*",
