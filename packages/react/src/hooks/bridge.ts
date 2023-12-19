@@ -18,12 +18,12 @@ export function useDeposit() {
   const [log, pushLog, resetLog] = useTransactionLog();
 
   const getTokenAddresses = useTokenAddresses();
-  const { data: crossChainMessenger } = useCrossChainMessenger({
+  const { data: crossChainMessenger, isLoading } = useCrossChainMessenger({
     l1AsSigner: true,
   });
 
   const deposit = useMutation(async ({ amount, token }: TransferRequest) => {
-    if (!crossChainMessenger) {
+    if (!crossChainMessenger && !isLoading) {
       throw new Error("CrossChainMessenger not initialized");
     }
     resetLog();
