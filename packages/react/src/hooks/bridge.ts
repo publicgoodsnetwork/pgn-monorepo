@@ -129,7 +129,7 @@ export function useWithdraw() {
 }
 
 // Keep track of log messages to show in UI
-function useTransactionLog() {
+export function useTransactionLog() {
   const [log, setLog] = useState<any>([]);
   return [
     log,
