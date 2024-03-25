@@ -82,7 +82,7 @@ export const Layout = ({ children }: PropsWithChildren) => {
         rel="apple-touch-icon"
       />
       {showAlert && (
-        <AlertBanner message="The Network is winding down in June, after which funds will be unavailable. We recommend against depositing funds to PGN. " onClose={() => setShowAlert(false)} />
+        <AlertBanner message="The Network is winding down in June, after which funds will be unavailable. We strongly recommend against depositing funds to PGN. " onClose={() => setShowAlert(false)} />
       )}
       <main>
         <header className="container mx-auto h-20 items-center justify-between p-2 md:flex">
