@@ -17,8 +17,16 @@ import AlertBanner from "./AlertBanner";
 
 const navItems = [
   {
-    label: "Bridge",
+    label: "Native Bridge",
     href: "/",
+  },
+  {
+    label: "Rollbridge",
+    href: "https://app.rollbridge.app/",
+  },
+  {
+    label: "LayerSwap",
+    href: "https://www.layerswap.io/app",
   },
   {
     label: "Withdrawals",
