@@ -12,7 +12,7 @@ import { TransferLog } from "./TransferLog";
 import { ErrorMessage } from "./ErrorMessage";
 import { useSelectedToken } from "../hooks/useSelectedToken";
 import { Card } from "./ui/Card";
-import { memo, useMemo } from "react";
+import { memo, useMemo, useState } from "react";
 import { ethers } from "ethers";
 import { parseUnits } from "ethers/lib/utils.js";
 
@@ -60,7 +60,7 @@ function useAction() {
 
 export const BridgeTokens = memo(() => {
   const getToken = useSelectedToken();
-
+  
   const {
     action,
     chainIn,
