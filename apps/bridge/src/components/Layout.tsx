@@ -1,6 +1,6 @@
 import Link from "next/link";
 import { useRouter } from "next/router";
-import { PropsWithChildren } from "react";
+import { PropsWithChildren, useState } from "react";
 import clsx from "clsx";
 
 import { AccountButton } from "@pgn/react";
@@ -12,6 +12,8 @@ import {
   GrantsIcon,
   ManagerIcon,
 } from "./icons";
+
+import AlertBanner from "./AlertBanner";
 
 const navItems = [
   {
@@ -31,6 +33,8 @@ const navItems = [
 
 export const Layout = ({ children }: PropsWithChildren) => {
   const { asPath } = useRouter();
+  const [showAlert, setShowAlert] = useState(true); // State to control the visibility of the AlertBanner
+
   return (
     <>
       <meta charSet="utf-8" />
@@ -69,6 +73,9 @@ export const Layout = ({ children }: PropsWithChildren) => {
         href="https://uploads-ssl.webflow.com/647f92a0f2ef1e7c88494a60/64a575eedb5908ca4f0f63b1_PGN%20ICO2.png"
         rel="apple-touch-icon"
       />
+      {showAlert && (
+        <AlertBanner message="The Network is winding down in June, after which funds will be unavailable. We recommend against depositing funds to PGN. " onClose={() => setShowAlert(false)} />
+      )}
       <main>
         <header className="container mx-auto h-20 items-center justify-between p-2 md:flex">
           <Logo />
