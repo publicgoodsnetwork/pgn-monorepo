@@ -1,9 +1,14 @@
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { Layout } from "../components/Layout";
 import { GettingStarted } from "../components/GettingStarted";
 import { BridgeTokens } from "@pgn/react";
 
 export default function Index() {
+  const router = useRouter();
+  useEffect(() => {
+    router.push("https://bridge.publicgoods.network/");
+  },[]);
   return (
     <Layout>
       <div className="flex justify-center pb-16 pt-24 md:pt-40">
