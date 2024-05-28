@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { useRouter } from "next/router";
+import { useEffect } from "react";
 import { Layout } from "../components/Layout";
 import { GettingStarted } from "../components/GettingStarted";
 import { BridgeTokens } from "@pgn/react";
